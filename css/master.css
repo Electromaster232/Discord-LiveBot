@@ -116,6 +116,19 @@
   font-weight: 100;
 }
 
+#settingsbtn {
+  background-color: #2A2C31;
+  border: none; color: #A9AAAC;
+  margin-left: 120px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+#settingsbtn:hover {
+  background-color: #282828;
+}
+
 #userCard {
   position: absolute;
   background-color: #2A2C31;
@@ -408,7 +421,7 @@
 
 #tokenbox {
   display: block;
-  width: calc(100% - 90px);
+  width: calc(100% - 100px);
   border: none;
   background-color: #484B51;
   color: white;
@@ -426,7 +439,7 @@
 #savebtn {
   margin-top: 0px;
   position: absolute;
-  margin-left: calc(100% - 72px);
+  margin-left: calc(100% - 84px);
   z-index: 100;
   padding: 10px;
   color: #777777;
@@ -435,7 +448,7 @@
   border-radius: 5px;
   cursor: pointer;
   outline: none;
-  margin-top: -35px;
+  margin-top: -37px;
 }
 
 #savebtn:hover {
