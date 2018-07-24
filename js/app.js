@@ -3,7 +3,7 @@ let selectedGuild;
 let selectedChan;
 let selectedChatDiv;
 let oldimg;
-let barry = false;
+let Akira = false;
 const remote = require('electron').remote;
 const fs = require('fs');
 require('electron-titlebar');
@@ -122,9 +122,9 @@ function load(token) {
             scroll = true;
           }
 
-          if (barry) {
+          if (Akira) {
             bunch = false;
-            barry = false;
+            Akira = false;
           }
 
           let div;
@@ -460,7 +460,7 @@ function channelSelect(c, name) {
 function command(text) {
   let div = document.createElement('div');
   div.id = 'messageCont';
-  div.classList.add('barryCommand');
+  div.classList.add('akiraCommand');
   div.style.backgroundColor = 'rgba(50,50,50,0.4)';
   document.getElementById('message-list').appendChild(div);
 
@@ -472,7 +472,7 @@ function command(text) {
   let name = document.createElement('p');
   let username;
 
-  username = document.createTextNode('Barry');
+  username = document.createTextNode('Akira');
   name.appendChild(username);
   name.id = 'messageUsername';
   name.style.color = `#999999`;
@@ -498,7 +498,7 @@ function command(text) {
   div.appendChild(text2);
   document.getElementById('message-list').scrollTop = document.getElementById('message-list').scrollHeight;
   document.getElementById('msgbox').value = '';
-  barry = true;
+  Akira = true;
 }
 
 let helpMsg = [
