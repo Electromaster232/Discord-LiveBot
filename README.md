@@ -1,3 +1,5 @@
+# Originally Developed By PlayBy, Modified by Endless Hosting
+
 # Discord-LiveBot
 An app that allows you to be inside a bot!
 
