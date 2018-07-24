@@ -421,7 +421,7 @@
 
 #tokenbox {
   display: block;
-  width: calc(100% - 100px);
+  width: calc(100% - 110px);
   border: none;
   background-color: #484B51;
   color: white;
@@ -439,7 +439,7 @@
 #savebtn {
   margin-top: 0px;
   position: absolute;
-  margin-left: calc(100% - 84px);
+  margin-left: calc(100% - 93px);
   z-index: 100;
   padding: 10px;
   color: #777777;
@@ -448,7 +448,7 @@
   border-radius: 5px;
   cursor: pointer;
   outline: none;
-  margin-top: -37px;
+  margin-top: -35px;
 }
 
 #savebtn:hover {
