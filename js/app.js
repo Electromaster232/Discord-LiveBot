@@ -509,7 +509,7 @@ let helpMsg = [
   '/help - Lists all commands.',
   '/shrug - Prepends ¯\\_(ツ)_/¯ to your message.',
   '/tableflip - Prepends (╯°□°）╯︵ ┻━┻ to your message.',
-  '/lenny - Prepends ( ͡° ͜ʖ ͡°) to your message.'
+  '/lenny - Prepends ( ͡° ͜ʖ ͡°) to your message.',
   '/ping - Check the hearbeat to discord.',
   '/server - Get some info about the server.',
   '/eval - Execute a command.'
