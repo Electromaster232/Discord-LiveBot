@@ -3,7 +3,7 @@ let selectedGuild;
 let selectedChan;
 let selectedChatDiv;
 let oldimg;
-let version = "a0.1.0";
+let version = "a0.2.0";
 let barry = false;
 const remote = require('electron').remote;
 const fs = require('fs');
