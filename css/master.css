@@ -1,3 +1,13 @@
+@keyframes blur {
+    from {-webkit-filter: blur(1px)}
+    to {-webkit-filter: blur(0px)}
+}
+
+* {
+    animation-name: blur;
+    animation-duration: 0.5s;
+}
+
 #body {
   position: fixed;
   overflow-y: hidden;
