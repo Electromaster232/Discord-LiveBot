@@ -1,5 +1,7 @@
 **Originally Developed By PlayBy, Modified by Endless Hosting**
 
+###NOTE: Some of the assets in this project belong to Discord Inc, and anyone else it belongs to.
+
 # Discord-LiveBot
 Discord-LiveBot allows you to take control of your Discord bot using a client-like interface.
 
