@@ -2,10 +2,35 @@
     from {-webkit-filter: blur(1px)}
     to {-webkit-filter: blur(0px)}
 }
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.hidden {visibility: hidden;}
 
 * {
     animation-name: blur;
     animation-duration: 0.5s;
+}
+
+.center {
+    position: absolute;
+    margin: -100px 0 0 -200px;
+    top: 52%;
+    left: 64%;
+}
+
+#spinningKiwi {
+  -webkit-animation: spin 3s infinite linear;
 }
 
 #body {

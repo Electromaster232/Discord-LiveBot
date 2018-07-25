@@ -38,7 +38,7 @@ function create() {
 }
 
 function load(token) {
-
+  document.getElementById('spinningKiwi').style.visibility = 'visible';
   global.bot = new Discord.Client();
   bot.login(token);
 
@@ -49,7 +49,7 @@ function load(token) {
       console.log('Invalid Token');
       return;
     }
-
+    document.getElementById('spinningKiwi').style.visibility = 'hidden';
     document.getElementById('userCardName').innerHTML = bot.user.username;
     document.getElementById('userCardDiscrim').innerHTML = `#${bot.user.discriminator}`;
     document.getElementById('userCardIcon').src = `${bot.user.displayAvatarURL}`;
@@ -223,6 +223,12 @@ function guildSelect(g, img) {
       channelList.removeChild(channelList.firstChild);
   }
 
+  let messagelist = document.getElementById("message-list");
+  while (messagelist.firstChild) {
+      messagelist.removeChild(messagelist.firstChild);
+  }
+  selectedChan = null;
+
   // Update guild profile
 
   if (g.name.length <= 22) {
@@ -367,6 +373,7 @@ function guildSelect(g, img) {
 }
 
 function channelSelect(c, name) {
+  document.getElementById('spinningKiwi').style.visibility = 'visible';
   let messages = document.getElementById("message-list");
   while (messages.firstChild) {
       messages.removeChild(messages.firstChild);
@@ -457,6 +464,7 @@ function channelSelect(c, name) {
     );
     messages.scrollTop = messages.scrollHeight;
   }
+  document.getElementById('spinningKiwi').style.visibility = 'hidden';
 }
 
 function command(text) {
@@ -631,8 +639,11 @@ function options(type, content) {
     break;
 
     case 'invite':
-      selectedChan.createInvite().then(invite => {command('Created invite for '+invite.guild.name+' \nhttps://discord.gg/'+invite.code);})//options.unique = true, options.temporary = document.getElementById('temporary-inviteBox').value, options.maxUses = document.getElementById('maxuses-inviteBox').value, options.maxAge = document.getElementById('maxage-inviteBox').value).then(invite => {command('Created invite for '+invite.guild.name+' \nhttps://discord.gg/'+invite.code);})
-      document.getElementById('usernameBox').value
+      if (selectedChan != null) {
+        selectedChan.createInvite().then(invite => {command('Created invite for '+invite.guild.name+' \nhttps://discord.gg/'+invite.code);})//options.unique = true, options.temporary = document.getElementById('temporary-inviteBox').value, options.maxUses = document.getElementById('maxuses-inviteBox').value, options.maxAge = document.getElementById('maxage-inviteBox').value).then(invite => {command('Created invite for '+invite.guild.name+' \nhttps://discord.gg/'+invite.code);})
+      } else {
+        command('You do not have a channel selected.')
+      }
     break;
   }
 }
