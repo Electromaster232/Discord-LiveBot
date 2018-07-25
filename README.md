@@ -22,6 +22,13 @@ LiveBot had been built to copy discord, and while it is not exact, it is pretty 
 To install livebot, just download as a zip file, which you can do by pressing the green button above. Once you have downloaded and extracted the zip file, go into the directory with a command prompt or shell window. In the shell window, enter the commands `npm install`. Make sure that the terminal window is running as administrator. If this does not work, then just run `npm install electron`. Then to start it, run `npm test`.
 
 ## Current features.
+
+### Side Bar
+
+The Updated sidebar allows you to change either your game or status! <br>
+
+<img src='https://cdn.discordapp.com/attachments/432645108408516608/471713256764080131/unknown.png' style='border-radius: 10px;'>
+
 ### Animated guild indicator
 Not very useful, but hey! It's here! <br>
 <img src='https://i.imgur.com/o4SWjpX.gif' style='border-radius: 10px;'>
@@ -33,7 +40,7 @@ This box is how you log into a profile. To log into a token by default, put it i
 </br>
 
 ### Akira!
-Akira is the livebot version of discord's Clyde. Except Akira has some fun commands! Just use the prefix `/`. Only you can see what Akira says, so don't worry about interfering with any conversations. <br>
+Akira is the livebot version of Discord's Clyde. Except Akira works like an actual Bot! Just use the prefix `/`. Only you can see what Akira says, so don't worry about interfering with any conversations. <br>
 <img src='https://i-banned.dj-electro.me/233641.png' style='border-radius: 10px;'>
 
 ### Profile card.
@@ -51,3 +58,6 @@ This project's color is Velgenta, of the hex #C13281. The mascot of the project 
 
 ## Planned Features.
 Planned features can be seen [here](https://github.com/EndlessHosting/Discord-LiveBot/issues/1)
+
+### MacOS?
+While we do support MacOS and this App even runs on it, our Focus is mainly on Windows. 
