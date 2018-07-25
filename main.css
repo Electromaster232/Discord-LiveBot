@@ -1,9 +1,10 @@
-body{font-family: Tahoma, Geneva, sans-serif; background-color: black; color: rgb(161, 90, 90);}
+body{font-family: Tahoma, Geneva, sans-serif; background-color: black; color: rgb(255, 255, 255);}
 .logo{color: rgb(79,93,255); /* Old browsers */
 color: -moz-linear-gradient(-45deg, rgba(79,93,255,1) 0%, rgba(211,238,255,1) 100%); /* FF3.6-15 */
 color: -webkit-linear-gradient(-45deg, rgba(79,93,255,1) 0%,rgba(211,238,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
 color: linear-gradient(135deg, rgba(79,93,255,1) 0%,rgba(211,238,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 font-size: 4em;
+font-family: 'Raleway', sans-serif;
 font-weight: bold;}
 .center {
     position: absolute;
