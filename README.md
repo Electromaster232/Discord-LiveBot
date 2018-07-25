@@ -22,6 +22,13 @@ LiveBot had been built to copy discord, and while it is not exact, it is pretty 
 To install livebot, just download as a zip file, which you can do by pressing the green button above. Once you have downloaded and extracted the zip file, go into the directory with a command prompt or shell window. In the shell window, enter the commands `npm install`. Make sure that the terminal window is running as administrator. If this does not work, then just run `npm install electron`. Then to start it, run `npm test`.
 
 ## Current features.
+
+### Side Bar
+
+The Updated sidebar allows you to change either your game or status! <br>
+
+<img src='https://cdn.discordapp.com/attachments/432645108408516608/471713256764080131/unknown.png' style='border-radius: 10px;'>
+
 ### Animated guild indicator
 Not very useful, but hey! It's here! <br>
 <img src='https://i.imgur.com/o4SWjpX.gif' style='border-radius: 10px;'>
