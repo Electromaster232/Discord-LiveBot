@@ -6,6 +6,11 @@
   "scripts": {
     "test": "electron ."
   },
+  "build": {
+    "directories": {
+      "files": ['js/*', 'build/*', '../js/*']
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EndlessHosting/Discord-LiveBot.git"
