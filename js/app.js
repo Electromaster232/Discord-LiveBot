@@ -1,4 +1,4 @@
-global.Discord = require('discord.js');
+global.Discord = require('discord.js'); // Gets Discord.js to load, do not remove!
 let selectedGuild;
 let selectedChan;
 let selectedChatDiv;
