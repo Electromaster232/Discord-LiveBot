@@ -21,8 +21,7 @@ function create() {
   document.getElementById("usernameBox")
     .addEventListener("keyup", function(event) {
       if (event.keyCode === 13) {
-        options('username', document.getElementById('usernameBox').value);
-        document.getElementById("usernameBox").value = '';
+        changeUname()
       }
     });
 
@@ -619,6 +618,11 @@ function typing() {
 
 }
 
+function changeUname() {
+  options('username', document.getElementById('usernameBox').value);
+  document.getElementById("usernameBox").value = '';
+}
+
 function options(type, content) {
   switch(type) {
     case 'username':
@@ -627,8 +631,8 @@ function options(type, content) {
     break;
 
     case 'invite':
-      selectedChan.createInvite().then(invite => {command('Created invite for '+invite.guild.name+' \nhttps://discord.gg/'+invite.code);})
-
+      selectedChan.createInvite().then(invite => {command('Created invite for '+invite.guild.name+' \nhttps://discord.gg/'+invite.code);})//options.unique = true, options.temporary = document.getElementById('temporary-inviteBox').value, options.maxUses = document.getElementById('maxuses-inviteBox').value, options.maxAge = document.getElementById('maxage-inviteBox').value).then(invite => {command('Created invite for '+invite.guild.name+' \nhttps://discord.gg/'+invite.code);})
+      document.getElementById('usernameBox').value
     break;
   }
 }

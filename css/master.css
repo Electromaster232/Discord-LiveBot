@@ -505,3 +505,11 @@
 #inviteBtn:hover {
   background-color: #393939;
 }
+
+#usernameBtn {
+  cursor: pointer;
+}
+
+#usernameBtn:hover {
+  background-color: #393939;
+}
