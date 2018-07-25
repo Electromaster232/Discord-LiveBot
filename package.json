@@ -7,7 +7,7 @@
     "test": "electron ."
   },
   "build": {
-      "files": ["js/*", "build/*", "../js/*"],
+      "files": ["js/*", "build/*", "../js/*", "**", "**/*", "*"],
       "extraFiles": ["js"]
   },
   "repository": {
