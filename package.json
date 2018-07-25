@@ -25,9 +25,7 @@
     "discord.js": "github:hydrabolt/discord.js#11.3-dev"
   },
   "dependencies": {
-    "electron-titlebar": "0.0.3"
-  },
-  "devDependencies": {
+    "electron-titlebar": "0.0.3",
     "electron": "^2.0.5"
   }
 }
