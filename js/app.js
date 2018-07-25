@@ -397,6 +397,19 @@ function channelSelect(c, name) {
   selectedChanDiv = name;
   console.log(selectedChanDiv.style.color);
   name.style.color = '#eee';
+  if (!selectedChan.permissionsFor(bot.user).has("SEND_MESSAGES")) {
+    document.getElementById('msgbox').value = ''
+    document.getElementById('msgbox').disabled = true
+    document.getElementById('msgbox').placeholder = "You don't have permissions neccesary to chat in #".concat(c.name).concat(".")
+    document.getElementById('msgbox').style.cursor = "not-allowed"
+    document.getElementById('sendbtn').style.cursor = "not-allowed"
+  } else {
+    document.getElementById('msgbox').value = ''
+    document.getElementById('msgbox').disabled = false
+    document.getElementById('msgbox').placeholder = "Message #".concat(c.name)
+    document.getElementById('msgbox').style.cursor = ""
+    document.getElementById('sendbtn').style.cursor = ""
+  }
   messageCreate();
   async function messageCreate() {
     let count=0;
