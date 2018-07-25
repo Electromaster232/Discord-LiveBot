@@ -3,7 +3,8 @@ let selectedGuild;
 let selectedChan;
 let selectedChatDiv;
 let oldimg;
-let Akira = false;
+let version = "a0.1.0";
+let barry = false;
 const remote = require('electron').remote;
 const fs = require('fs');
 require('electron-titlebar');
@@ -31,6 +32,8 @@ function create() {
         setToken();
       }
     });
+
+    document.getElementById('versionstr').innerHTML = document.getElementById('versionstr').innerHTML.concat(version);
 
     load(localStorage.getItem('livebot-token'));
 }
@@ -65,8 +68,8 @@ function load(token) {
       if (g.iconURL === null) {
 
         let img = document.createElement('div');
-        img.style.height = '40px';
-        img.style.width = '40px';
+        img.style.height = '50px';
+        img.style.width = '50px';
         img.id = `guild-icon`;
         img.style.backgroundColor = '#2F3136';
         img.style.marginBottom = '4px';
@@ -89,8 +92,8 @@ function load(token) {
         img.title = g.name;
         img.height = '40';
         img.width = '40';
-        img.style.height = '40px';
-        img.style.width = '40px';
+        img.style.height = '50px';
+        img.style.width = '50px';
         img.id = `guild-icon`;
         img.classList.add(g.id);
         img.onclick = function(){guildSelect(g, this); selectedGuild = g};
@@ -122,9 +125,9 @@ function load(token) {
             scroll = true;
           }
 
-          if (Akira) {
+          if (barry) {
             bunch = false;
-            Akira = false;
+            barry = false;
           }
 
           let div;
@@ -198,7 +201,7 @@ function guildSelect(g, img) {
     return id == g.id;
   }
 
-  document.getElementById('guildIndicator').style.marginTop = `${bot.guilds.map(gu => `${gu.id}`).findIndex(guildPos)*44+4}px`;
+  document.getElementById('guildIndicator').style.marginTop = `${bot.guilds.map(gu => `${gu.id}`).findIndex(guildPos)*54+10}px`;
   img.style.borderRadius = '25%';
 
   oldimg = img;
@@ -460,7 +463,7 @@ function channelSelect(c, name) {
 function command(text) {
   let div = document.createElement('div');
   div.id = 'messageCont';
-  div.classList.add('akiraCommand');
+  div.classList.add('barryCommand');
   div.style.backgroundColor = 'rgba(50,50,50,0.4)';
   document.getElementById('message-list').appendChild(div);
 
@@ -472,7 +475,7 @@ function command(text) {
   let name = document.createElement('p');
   let username;
 
-  username = document.createTextNode('Akira');
+  username = document.createTextNode('Barry');
   name.appendChild(username);
   name.id = 'messageUsername';
   name.style.color = `#999999`;
@@ -498,7 +501,7 @@ function command(text) {
   div.appendChild(text2);
   document.getElementById('message-list').scrollTop = document.getElementById('message-list').scrollHeight;
   document.getElementById('msgbox').value = '';
-  Akira = true;
+  barry = true;
 }
 
 let helpMsg = [
@@ -506,6 +509,7 @@ let helpMsg = [
   '/help - Lists all commands.',
   '/shrug - Prepends ¯\\_(ツ)_/¯ to your message.',
   '/tableflip - Prepends (╯°□°）╯︵ ┻━┻ to your message.',
+  '/lenny - Prepends ( ͡° ͜ʖ ͡°) to your message.'
   '/ping - Check the hearbeat to discord.',
   '/server - Get some info about the server.',
   '/eval - Execute a command.'
@@ -531,6 +535,11 @@ function sendmsg() {
 
         case 'tableflip':
           selectedChan.send('(╯°□°）╯︵ ┻━┻ '+msg);
+          document.getElementById('msgbox').value = '';
+        break;
+
+        case 'lenny':
+          selectedChan.send('( ͡° ͜ʖ ͡°) '+msg);
           document.getElementById('msgbox').value = '';
         break;
 
