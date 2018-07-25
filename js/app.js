@@ -40,11 +40,13 @@ function create() {
     });
 
     document.getElementById('versionstr').innerHTML = document.getElementById('versionstr').innerHTML.concat(version);
-
     load(localStorage.getItem('livebot-token'));
 }
 
+
+
 function load(token) {
+  document.getElementById('nochannel').style.visibility = "hidden";
   document.getElementById('spinningKiwi').style.visibility = 'visible';
   global.bot = new Discord.Client();
   bot.login(token);
@@ -69,7 +71,7 @@ function load(token) {
       document.getElementById('userCardBot').innerHTML = `USER`;
       document.getElementById('userCardBot').style.marginLeft = `5px`;
     }
-
+    document.getElementById('nochannel').style.visibility = "visible";
     bot.guilds.forEach(g => {
 
 
@@ -247,6 +249,7 @@ function guildSelect(g, img) {
       messagelist.removeChild(messagelist.firstChild);
   }
   selectedChan = null;
+  document.getElementById('nochannel').style.visibility = "visible";
 
   // Update guild profile
 
@@ -498,6 +501,7 @@ function channelSelect(c, name) {
     messages.scrollTop = messages.scrollHeight;
   }
   document.getElementById('spinningKiwi').style.visibility = 'hidden';
+  document.getElementById('nochannel').style.visibility = "hidden";
 }
 
 function command(text) {

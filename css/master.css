@@ -273,7 +273,7 @@ a:hover {
 }
 
 .blockedText {
-  cursor: default;
+  cursor: not-allowed;
 }
 
 #channelVoice {
