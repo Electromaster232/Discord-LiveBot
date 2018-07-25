@@ -13,7 +13,7 @@ Livebot is a program built with electron and discord.js, that will allow you to 
 Livebot had been built to copy discord, and while it is not exact, it is pretty close. More additions will come soon, so just be patient, but feel free to recommend any addition, just create an issue!
 
 ## Screenshots
-<img src='https://i-banned.dj-electro.me/736227.png' style='border-radius: 10px;'>
+<img src='https://i-banned.dj-electro.me/482109.png' style='border-radius: 10px;'>
 
 
 ## How to install
