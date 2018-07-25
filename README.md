@@ -1,16 +1,16 @@
-### Originally Developed By PlayBy, Modified by Endless Hosting
+**Originally Developed By PlayBy, Modified by Endless Hosting**
 
 # Discord-LiveBot
-Discord-Livebot allows you to take control of your Discord bot using a client-like interface.
+Discord-LiveBot allows you to take control of your Discord bot using a client-like interface.
 
 At the moment, LiveBot is still in alpha stage. To run it, open a terminal window in the main directory, then type `npm test`.
 
 <img src='https://i-banned.dj-electro.me/1032299.png' style='border-radius: 10px;'/>
 
 ## What is this?
-Livebot is a program built with electron and discord.js, that will allow you to have discord controlling a bot. You are able to view messages in channels, send messages, interact with people, and see what is going on in the servers your bot is in. Livebot will also work with a user account as well, so you are not just limited to bots.
+LiveBot is a program built with electron and discord.js, that will allow you to have discord controlling a bot. You are able to view messages in channels, send messages, interact with people, and see what is going on in the servers your bot is in. LiveBot will also work with a user account as well, so you are not just limited to bots.
 
-Livebot had been built to copy discord, and while it is not exact, it is pretty close. More additions will come soon, so just be patient, but feel free to recommend any addition, just create an issue!
+LiveBot had been built to copy discord, and while it is not exact, it is pretty close. More additions will come soon, so just be patient, but feel free to recommend any addition, just create an issue!
 
 ## Screenshots
 <img src='https://i-banned.dj-electro.me/482109.png' style='border-radius: 10px;'>
@@ -31,7 +31,7 @@ This box is how you log into a profile. To log into a token by default, put it i
 </br>
 
 ### Akira!
-Akira is the livebot version of discord's Clyde. Except Akira has some fun commands! Just use the prefix `/`. Only you can see what barry says, so don't worry about interfering with any conversations. <br>
+Akira is the livebot version of discord's Clyde. Except Akira has some fun commands! Just use the prefix `/`. Only you can see what Akira says, so don't worry about interfering with any conversations. <br>
 <img src='https://i-banned.dj-electro.me/233641.png' style='border-radius: 10px;'>
 
 ### Profile card.
@@ -42,6 +42,10 @@ The profile card is able to tell you the username, the avatar image, the discrim
 ### Guild card.
 The guild card gives a little more information than the basic discord 'name of the guild'. The guild card shows you the name of the guild, the guild icon, and how many users are in the guild. <br>
 <img src='https://i.imgur.com/NJiVQ6K.png' style='border-radius: 10px;'>
+
+### Branding(?) things!
+This project's color is Velgenta, of the hex #C13281. The mascot of the project is the Kiwi bird, the assets for the icons can be found in the images folder. <br>
+<br> ![#c13281](https://dummyimage.com/150/c13281/fff&text=Velgenta)
 
 ## Planned Features.
 Planned features can be seen [here](https://github.com/EndlessHosting/Discord-LiveBot/issues/1)
