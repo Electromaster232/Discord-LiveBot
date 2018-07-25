@@ -103,6 +103,15 @@ function load(token) {
     });
   });
 
+  // Open all links in external browser
+  let shell = require('electron').shell
+  document.addEventListener('click', function (event) {
+    if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
+      event.preventDefault()
+      shell.openExternal(event.target.href)
+    }
+  })
+
   bot.on('message', (m) => {
     if (selectedChan) {
       if (m.channel.id == selectedChan.id) {
@@ -175,6 +184,7 @@ function load(token) {
 
           let content = document.createTextNode(m.cleanContent);
           text.appendChild(content);
+          text.innerHTML = urlify(text.innerHTML);
           text.id = 'messageText';
           div.appendChild(text);
           if (scroll == true) {
@@ -471,6 +481,7 @@ function channelSelect(c, name) {
           let content = document.createTextNode(m.cleanContent);
           text.appendChild(content);
           text.id = 'messageText';
+          text.innerHTML = urlify(text.innerHTML);
           div.appendChild(text);
         });
       }
@@ -642,6 +653,15 @@ function typing() {
 function changeUname() {
   options('username', document.getElementById('usernameBox').value);
   document.getElementById("usernameBox").value = '';
+}
+
+function urlify(text) {
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function(url) {
+        return '<a href="' + url + '" target="_blank">' + url + '</a>';
+    })
+    // or alternatively
+    // return text.replace(urlRegex, '<a href="$1">$1</a>')
 }
 
 function options(type, content) {

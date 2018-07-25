@@ -29,6 +29,15 @@
     left: 64%;
 }
 
+a {
+  color: #0096cf;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 #spinningKiwi {
   -webkit-animation: spin 3s infinite linear;
 }
