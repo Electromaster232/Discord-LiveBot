@@ -8,7 +8,7 @@ let win;
 
 function createWindow() {
   win = new BrowserWindow({width: 1200, height: 650, frame: false, icon: path.join(__dirname, 'images/kiwimascoticnborders.png')});
-
+  win.setOverlayIcon('images/statuses/offline.png', 'Offline');
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
@@ -20,6 +20,10 @@ function createWindow() {
 }
 
 app.on('ready', createWindow);
+
+global.BWReport = function(name){
+    return win;
+}
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {

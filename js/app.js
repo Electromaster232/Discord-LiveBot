@@ -45,10 +45,12 @@ function load(token) {
   bot.on('ready', () => {
     try {
       console.log(`Logged in as ${bot.user.tag}`);
+
     } catch (err) {
       console.log('Invalid Token');
       return;
     }
+    remote.getGlobal('BWReport')().setOverlayIcon('images/statuses/online.png', 'Online');
     document.getElementById('spinningKiwi').style.visibility = 'hidden';
     document.getElementById('userCardName').innerHTML = bot.user.username;
     document.getElementById('userCardDiscrim').innerHTML = `#${bot.user.discriminator}`;
