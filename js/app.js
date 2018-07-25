@@ -18,6 +18,13 @@ function create() {
       }
     });
 
+  document.getElementById("statusBox")
+    .addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        setStatus();
+      }
+    });
+
   document.getElementById("usernameBox")
     .addEventListener("keyup", function(event) {
       if (event.keyCode === 13) {
@@ -666,6 +673,14 @@ function urlify(text) {
     // return text.replace(urlRegex, '<a href="$1">$1</a>')
 }
 
+function setStatus() {
+  options('status', document.getElementById('statusBox').value)
+}
+
+function setGame() {
+  options('game', document.getElementById('gameBox').value)
+}
+
 function options(type, content) {
   switch(type) {
     case 'username':
@@ -679,6 +694,15 @@ function options(type, content) {
       } else {
         command('You do not have a channel selected.')
       }
+    break;
+
+    case 'status':
+      bot.user.setStatus(content);
+    break;
+
+    case 'game':
+      bot.user.setGame(content);
+      document.getElementById('gameBox').value = "";
     break;
   }
 }

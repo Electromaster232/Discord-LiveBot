@@ -542,18 +542,10 @@ a:hover {
   outline: none;
 }
 
-#inviteBtn {
+#inviteBtn, #usernameBtn, #statusBtn, #gameBtn {
   cursor: pointer;
 }
 
-#inviteBtn:hover {
-  background-color: #393939;
-}
-
-#usernameBtn {
-  cursor: pointer;
-}
-
-#usernameBtn:hover {
+#inviteBtn:hover, #usernameBtn:hover, #statusBtn:hover, #gameBtn:hover {
   background-color: #393939;
 }
