@@ -31,7 +31,7 @@ This box is how you log into a profile. To log into a token by default, put it i
 </br>
 
 ### Akira!
-Barry is the livebot version of discord's Clyde. Except Akira has some fun commands! Just use the prefix `/`. Only you can see what barry says, so don't worry about interfering with any conversations. <br>
+Akira is the livebot version of discord's Clyde. Except Akira has some fun commands! Just use the prefix `/`. Only you can see what barry says, so don't worry about interfering with any conversations. <br>
 <img src='https://i-banned.dj-electro.me/233641.png' style='border-radius: 10px;'>
 
 ### Profile card.
