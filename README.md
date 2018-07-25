@@ -3,7 +3,7 @@
 # Discord-LiveBot
 Discord-Livebot allows you to take control of your Discord bot using a client-like interface.
 
-At the moment, livebot is still in extreme beta. To run it, open a terminal window in the main directory, then type `npm test`.
+At the moment, LiveBot is still in alpha stage. To run it, open a terminal window in the main directory, then type `npm test`.
 
 <img src='https://i-banned.dj-electro.me/1032299.png' style='border-radius: 10px;'/>
 

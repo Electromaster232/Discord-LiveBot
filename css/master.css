@@ -53,6 +53,7 @@
 
 
 #guild-icon {
+  height: 100px;
   border-radius: 50%;
   margin-left: 10px;
   transition-duration: 0.3s;
@@ -74,7 +75,7 @@
 }
 
 #guild-list {
-  width: 60px;
+  width: 67px;
   height: calc(100vh - 30px);
   margin: 0px -10px 10px -10px;
   padding-top: 2px;
@@ -439,7 +440,7 @@
 #savebtn {
   margin-top: 0px;
   position: absolute;
-  margin-left: calc(100% - 115px);
+  margin-left: calc(100% - 100px);
   z-index: 100;
   padding: 10px;
   color: #777777;
