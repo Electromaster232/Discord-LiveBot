@@ -62,3 +62,6 @@ typings/
 
 package.json
 package-lock.json
+
+#Some dumb Mac file
+.DS_Store
