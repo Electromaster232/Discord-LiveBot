@@ -1,6 +1,6 @@
 {
   "name": "discord-livebot",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "description": "Control any token!",
   "main": "start.js",
   "scripts": {
@@ -8,24 +8,29 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PlayBy/Discord-LiveBot.git"
+    "url": "git+https://github.com/EndlessHosting/Discord-LiveBot.git"
   },
   "keywords": [
     "discord",
     "livebot",
     "discord-livebot"
   ],
-  "author": "SharkFin",
+  "author": "EndlessHosting",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/PlayBy/Discord-LiveBot/issues"
+    "url": "https://github.com/EndlessHosting/Discord-LiveBot/issues"
   },
-  "homepage": "https://github.com/PlayBy/Discord-LiveBot#readme",
+  "homepage": "https://github.com/EndlessHosting/Discord-LiveBot#readme",
   "devDependencies": {
-    "discord.js": "github:hydrabolt/discord.js#11.3-dev"
+    "discord.js": "github:hydrabolt/discord.js#11.3-dev",
+    "electron": "^2.0.5"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "electron-titlebar": "0.0.3"
+=======
     "electron-titlebar": "0.0.3",
     "electron": "^2.0.5"
+>>>>>>> 9388dbd33fcb1ab18db99ba61c7312374397d79d
   }
 }
