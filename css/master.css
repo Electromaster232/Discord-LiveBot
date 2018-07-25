@@ -396,9 +396,9 @@
 }
 
 #msgbox {
-  width: calc(100% - 50px);
+  width: calc(100% - 80px);
   display: block;
-  margin-left: auto;
+  margin-left: 10px;
   margin-right: auto;
   background-color: #484B51;
   border: none;
@@ -459,10 +459,10 @@
 #sendbtn {
   margin-top: 0px;
   position: absolute;
-  margin-left: calc(100% - 110px);
+  margin-left: calc(100% - 61px);
   z-index: 100;
   padding: 10px;
-  color: #777777;
+  color: #aaaaaa;
   background-color: #484B51;
   border: none;
   border-radius: 5px;
