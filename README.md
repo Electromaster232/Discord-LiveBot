@@ -58,3 +58,6 @@ This project's color is Velgenta, of the hex #C13281. The mascot of the project 
 
 ## Planned Features.
 Planned features can be seen [here](https://github.com/EndlessHosting/Discord-LiveBot/issues/1)
+
+### MacOS?
+While we do support MacOS and this App even runs on it, our Focus is mainly on Windows. 
