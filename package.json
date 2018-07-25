@@ -26,11 +26,7 @@
     "electron": "^2.0.5"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "electron-titlebar": "0.0.3"
-=======
     "electron-titlebar": "0.0.3",
     "electron": "^2.0.5"
->>>>>>> 9388dbd33fcb1ab18db99ba61c7312374397d79d
   }
 }
