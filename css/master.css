@@ -29,6 +29,15 @@
     left: 64%;
 }
 
+a {
+  color: #0096cf;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 #spinningKiwi {
   -webkit-animation: spin 3s infinite linear;
 }
@@ -533,18 +542,10 @@
   outline: none;
 }
 
-#inviteBtn {
+#inviteBtn, #usernameBtn, #statusBtn, #gameBtn {
   cursor: pointer;
 }
 
-#inviteBtn:hover {
-  background-color: #393939;
-}
-
-#usernameBtn {
-  cursor: pointer;
-}
-
-#usernameBtn:hover {
+#inviteBtn:hover, #usernameBtn:hover, #statusBtn:hover, #gameBtn:hover {
   background-color: #393939;
 }

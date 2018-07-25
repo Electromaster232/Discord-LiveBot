@@ -18,6 +18,13 @@ function create() {
       }
     });
 
+  document.getElementById("statusBox")
+    .addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        setStatus();
+      }
+    });
+
   document.getElementById("usernameBox")
     .addEventListener("keyup", function(event) {
       if (event.keyCode === 13) {
@@ -45,10 +52,12 @@ function load(token) {
   bot.on('ready', () => {
     try {
       console.log(`Logged in as ${bot.user.tag}`);
+
     } catch (err) {
       console.log('Invalid Token');
       return;
     }
+    remote.getGlobal('BWReport')().setOverlayIcon('images/statuses/online.png', 'Online');
     document.getElementById('spinningKiwi').style.visibility = 'hidden';
     document.getElementById('userCardName').innerHTML = bot.user.username;
     document.getElementById('userCardDiscrim').innerHTML = `#${bot.user.discriminator}`;
@@ -102,6 +111,15 @@ function load(token) {
       }
     });
   });
+
+  // Open all links in external browser
+  let shell = require('electron').shell
+  document.addEventListener('click', function (event) {
+    if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
+      event.preventDefault()
+      shell.openExternal(event.target.href)
+    }
+  })
 
   bot.on('message', (m) => {
     if (selectedChan) {
@@ -175,6 +193,7 @@ function load(token) {
 
           let content = document.createTextNode(m.cleanContent);
           text.appendChild(content);
+          text.innerHTML = urlify(text.innerHTML);
           text.id = 'messageText';
           div.appendChild(text);
           if (scroll == true) {
@@ -397,6 +416,19 @@ function channelSelect(c, name) {
   selectedChanDiv = name;
   console.log(selectedChanDiv.style.color);
   name.style.color = '#eee';
+  if (!selectedChan.permissionsFor(bot.user).has("SEND_MESSAGES")) {
+    document.getElementById('msgbox').value = ''
+    document.getElementById('msgbox').disabled = true
+    document.getElementById('msgbox').placeholder = "You don't have permissions neccesary to chat in #".concat(c.name).concat(".")
+    document.getElementById('msgbox').style.cursor = "not-allowed"
+    document.getElementById('sendbtn').style.cursor = "not-allowed"
+  } else {
+    document.getElementById('msgbox').value = ''
+    document.getElementById('msgbox').disabled = false
+    document.getElementById('msgbox').placeholder = "Message #".concat(c.name)
+    document.getElementById('msgbox').style.cursor = ""
+    document.getElementById('sendbtn').style.cursor = ""
+  }
   messageCreate();
   async function messageCreate() {
     let count=0;
@@ -458,6 +490,7 @@ function channelSelect(c, name) {
           let content = document.createTextNode(m.cleanContent);
           text.appendChild(content);
           text.id = 'messageText';
+          text.innerHTML = urlify(text.innerHTML);
           div.appendChild(text);
         });
       }
@@ -631,6 +664,23 @@ function changeUname() {
   document.getElementById("usernameBox").value = '';
 }
 
+function urlify(text) {
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function(url) {
+        return '<a href="' + url + '" target="_blank">' + url + '</a>';
+    })
+    // or alternatively
+    // return text.replace(urlRegex, '<a href="$1">$1</a>')
+}
+
+function setStatus() {
+  options('status', document.getElementById('statusBox').value)
+}
+
+function setGame() {
+  options('game', document.getElementById('gameBox').value)
+}
+
 function options(type, content) {
   switch(type) {
     case 'username':
@@ -644,6 +694,15 @@ function options(type, content) {
       } else {
         command('You do not have a channel selected.')
       }
+    break;
+
+    case 'status':
+      bot.user.setStatus(content);
+    break;
+
+    case 'game':
+      bot.user.setGame(content);
+      document.getElementById('gameBox').value = "";
     break;
   }
 }
