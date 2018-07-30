@@ -56,8 +56,9 @@ The guild card gives a little more information than the basic discord 'name of t
 This project's color is Velgenta, of the hex #C13281. The mascot of the project is the Kiwi bird, the assets for the icons can be found in the images folder. <br>
 <br> ![#c13281](https://dummyimage.com/150/c13281/fff&text=Velgenta)
 
+## MacOS?
+While we do support MacOS and this App even runs on it, our Focus is mainly on Windows. 
+
+
 ## Planned Features.
 Planned features can be seen [here](https://github.com/EndlessHosting/Discord-LiveBot/issues/1)
-
-### MacOS?
-While we do support MacOS and this App even runs on it, our Focus is mainly on Windows. 
