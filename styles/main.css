@@ -1,11 +1,11 @@
-body{font-family: Tahoma, Geneva, sans-serif; background-color: black; color: rgb(255, 255, 255);}
+body{font-family: Tahoma, Geneva, sans-serif; background-color: rgb(255, 255, 255); color: rgb(131, 131, 131);}
 .logo{color: rgb(79,93,255); /* Old browsers */
 color: -moz-linear-gradient(-45deg, rgba(79,93,255,1) 0%, rgba(211,238,255,1) 100%); /* FF3.6-15 */
 color: -webkit-linear-gradient(-45deg, rgba(79,93,255,1) 0%,rgba(211,238,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
 color: linear-gradient(135deg, rgba(79,93,255,1) 0%,rgba(211,238,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 font-size: 4em;
-font-family: 'Raleway', sans-serif;
-font-weight: bold;}
+font-family: 'Roboto Mono', sans-serif;
+font-weight: inherit;}
 .center {
     position: absolute;
     height: 200px;
@@ -15,5 +15,18 @@ font-weight: bold;}
     left: 50%;
 }
 a{
-    color: rgb(0, 255, 55);
+    color: rgb(193, 50, 129);
 }
+
+a:hover{
+    color: rgb(230, 75, 160);
+}
+
+footer {
+    position:absolute;
+    color: rgb(0, 0, 0);
+    bottom:0;
+    background: rgb(228, 228, 228);
+    width: 1420px;
+    right: 1%;
+ }
