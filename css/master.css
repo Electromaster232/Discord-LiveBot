@@ -412,6 +412,17 @@ a:hover {
   color: #fff;
 }
 
+#optionText{
+  margin-left: 15.5%;
+  margin-right: auto;
+  font-weight: 100;
+  font-size: 13px;
+  margin-top: -5px;
+  margin-bottom: 7px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 #messageUsername {
   font-size: 13px;
   margin-left: 60px;
