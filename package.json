@@ -1,7 +1,7 @@
 {
   "name": "discord-livebot",
   "version": "1.1.2",
-  "description": "Control any token!",
+  "description": "Control any Bot!,
   "main": "start.js",
   "scripts": {
     "test": "electron ."
