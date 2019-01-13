@@ -21,7 +21,11 @@ LiveBot had been built to copy discord, and while it is not exact, it is pretty 
 
 
 ## How to install
-To install livebot, just download as a zip file, which you can do by pressing the green button above. Once you have downloaded and extracted the zip file, go into the directory with a command prompt or shell window. In the shell window, enter the commands `npm install`. Make sure that the terminal window is running as administrator. If this does not work, then just run `npm install electron`. Then to start it, run `npm test`.
+1. Clone this Repo
+2. run `cd Discord-LiveBot && npm i`
+3.  to test it run `npm test`
+
+If it doesn't work, install electron using `npm i electron`
 
 ## Current features.
 
