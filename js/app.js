@@ -395,6 +395,11 @@ function guildSelect(g, img) {
 }
 
 function channelSelect(c, name) {
+
+  if(c.type == "voice"){
+    alert("Voice Channels are NOT supported at this time!");
+    return;
+  }
   document.getElementById('spinningKiwi').style.visibility = 'visible';
   let messages = document.getElementById("message-list");
   while (messages.firstChild) {
