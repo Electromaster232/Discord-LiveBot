@@ -65,3 +65,6 @@ package-lock.json
 
 #Some dumb Mac file
 .DS_Store
+
+#IntelliJ IDEA
+.idea/

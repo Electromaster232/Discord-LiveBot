@@ -5,7 +5,6 @@ let selectedChatDiv;
 let oldimg;
 let version = "a0.2.0";
 let barry = false;
-let hiddenChannels = true;
 const remote = require('electron').remote;
 const fs = require('fs');
 require('electron-titlebar');
@@ -25,11 +24,6 @@ function create() {
         setStatus();
       }
     });
-
-    document.getElementById("showhiddenChkBx")
-      .addEventListener("click", function(event) {
-        updateHiddenChannels();
-      });
 
   document.getElementById("usernameBox")
     .addEventListener("keyup", function(event) {
@@ -65,6 +59,7 @@ function load(token) {
       console.log('Invalid Token');
       return;
     }
+    remote.getGlobal('BWReport')().setOverlayIcon('images/statuses/online.png', 'Online');
     document.getElementById('spinningKiwi').style.visibility = 'hidden';
     document.getElementById('userCardName').innerHTML = bot.user.username;
     document.getElementById('userCardDiscrim').innerHTML = `#${bot.user.discriminator}`;
@@ -216,7 +211,6 @@ function load(token) {
 function guildSelect(g, img) {
   // Update the selected guild
   document.getElementById('guildIndicator').style.display = 'block';
-  selectedGuild = g;
   try {
     oldimg.classList.remove('selectedGuild');
     oldimg.style.borderRadius = '50%';
@@ -276,43 +270,25 @@ function guildSelect(g, img) {
 
   // List all categorised channels
 
-  //g.channels.sort((c1, c2) => c1.position - c2.position).forEach(c => {
+  g.channels.sort((c1, c2) => c1.position - c2.position).forEach(c => {
 
     g.channels.forEach(c1 => {
-      console.log(`name: ${c1.name} type: ${c1.type} parent: ${c1.parent} textplaced: ${textPlaced}`)
-      if (c1.type === 'text') {//&& c1.parent === null) {
-      if (c1.permissionsFor(g.me).has("VIEW_CHANNEL")) {
+      if (c1.type === 'text' && c1.parent === null && textPlaced == false) {
        let div = document.createElement('div');
        div.id = 'channel';
        document.getElementById('channel-elements').appendChild(div);
+
        let text = document.createElement('h5');
-     } else {
-       if (!hiddenChannel) {
-         console.log(`name: ${c1.name} type: ${c1.type} parent: ${c1.parent} textplaced: ${textPlaced}`)
-         if (c1.type === 'text') {//&& c1.parent === null) {
-         if (c1.permissionsFor(g.me).has("VIEW_CHANNEL")) {
-          let div = document.createElement('div');
-          div.id = 'channel';
-          document.getElementById('channel-elements').appendChild(div);
-          let text = document.createElement('h5');
-       }
-     }
        let content;
        if (c1.name.length < 25) {
          content = document.createTextNode(`# ${c1.name}`);
        } else {
          content = document.createTextNode(`# ${c1.name.substring(0,25)}...`);
        }
-       if (hiddenChannels) {
-         if (c1.permissionsFor(g.me).has("VIEW_CHANNEL")) {
-         text.appendChild(content);
-        }
-      } else {
-        text.appendChild(content);
-      }
+       text.appendChild(content);
        if (!c1.permissionsFor(g.me).has("VIEW_CHANNEL")) {
-        text.style.textDecoration = 'line-through';
-        text.classList.add('blockedText');
+         text.style.textDecoration = 'line-through';
+         text.classList.add('blockedText');
        } else {
          text.classList.add('viewableText');
          text.onclick = function(){channelSelect(c1, text)};
@@ -320,7 +296,7 @@ function guildSelect(g, img) {
        text.id = 'channelTextx';
        div.appendChild(text);
 
-     } else if (c1.type === 'voice') {// && c1.parent === null && voicePlaced == false) {
+     } else if (c1.type === 'voice' && c1.parent === null && voicePlaced == false) {
        let div = document.createElement('div');
        div.id = 'voice';
        document.getElementById('channel-elements').appendChild(div);
@@ -343,10 +319,11 @@ function guildSelect(g, img) {
        text.id = 'channelVoicex';
        div.appendChild(text);
      }
-   };//);
+   });
    textPlaced = true;
    voicePlaced = true;
-    if (c1.type === null) {
+    if (c.type === 'category') {
+
       // Categories
       let div = document.createElement('div');
       div.id = 'category';
@@ -354,10 +331,10 @@ function guildSelect(g, img) {
 
       let text = document.createElement('h5');
       let content;
-      if (c1.name.length < 25) {
-        content = document.createTextNode(`⌄ ${c1.name.toLowerCase()}`);
+      if (c.name.length < 25) {
+        content = document.createTextNode(`⌄ ${c.name.toLowerCase()}`);
       } else {
-        content = document.createTextNode(`⌄ ${c1.name.substring(0,25).toLowerCase()}...`);
+        content = document.createTextNode(`⌄ ${c.name.substring(0,25).toLowerCase()}...`);
       }
       text.appendChild(content);
       text.id = 'categoryText';
@@ -413,7 +390,7 @@ function guildSelect(g, img) {
         div1.appendChild(text1);
       });
     }
-  //});
+  });
 
 }
 
@@ -683,7 +660,7 @@ function savetoken() {
 }
 
 function typing() {
-
+    
 }
 
 function changeUname() {
@@ -732,8 +709,4 @@ function options(type, content) {
       document.getElementById('gameBox').value = "";
     break;
   }
-}
-
-function updateHiddenChannels() {
-    hiddenChannels = document.getElementById('showhiddenChkBx').checked
 }

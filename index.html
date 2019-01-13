@@ -3,18 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/app.js"></script>
     <link rel="stylesheet" href="css/master.css">
   </head>
+
   <body onload='create()'>
     <div id='electron-titlebar'>
       <p id='titleBar-name'><img src="images/livebotlogoadv.png" height=15></p>
       <div class='drag'></div>
-
     </div>
+
     <div id='main'>
       <div id='guild-list'>
-        <p><center style="margin-top: -18px;"><span style="margin-top: -10px; color: #C13281; font-family: Tahoma, Geneva, sans-serif; font-size: 0.6em;">LiveBot </span><br><span id="versionstr" style="margin-top: 0px; color: white; font-family: Tahoma, Geneva, sans-serif; font-size: 0.6em;"></span><hr style="border-color: #a0a0a0; font-family: Tahoma, Geneva, sans-serif; color: white; font-size: 0.6em;"></center></p>
+        <p> <center style="margin-top: -18px;"><span style="margin-top: -10px; color: #C13281; font-family: Tahoma, Geneva, sans-serif; font-size: 0.6em;">LiveBot </span><br><span id="versionstr" style="margin-top: 0px; color: white; font-family: Tahoma, Geneva, sans-serif; font-size: 0.6em;"></span><hr style="border-color: #a0a0a0; font-family: Tahoma, Geneva, sans-serif; color: white; font-size: 0.6em;"></center></p>
         <div id='guildIndicator'></div>
       </div>
 
@@ -52,7 +53,7 @@
         <div id='message-list'></div>
 
         <div id='sendmsg'>
-          <input type="text" name="message" value="" placeholder='Message' id='msgbox'  ontype='typing()'/>
+          <input type="text" name="message" value="" placeholder='Message' id='msgbox'/>
           <button type="button" name="button" onclick='sendmsg()' id='sendbtn'>Send</button>
         </div>
       </div>

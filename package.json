@@ -7,8 +7,17 @@
     "test": "electron ."
   },
   "build": {
-      "files": ["js/*", "build/*", "../js/*", "**", "**/*", "*"],
-      "extraFiles": ["js"]
+    "files": [
+      "js/*",
+      "build/*",
+      "../js/*",
+      "**",
+      "**/*",
+      "*"
+    ],
+    "extraFiles": [
+      "js"
+    ]
   },
   "repository": {
     "type": "git",
@@ -26,10 +35,10 @@
   },
   "homepage": "https://github.com/EndlessHosting/Discord-LiveBot#readme",
   "devDependencies": {
-    "discord.js": "github:hydrabolt/discord.js#11.3-dev",
-    "electron": "^2.0.5"
+    "electron": "^4.0.1"
   },
   "dependencies": {
+    "discord.js": "^11.4.2",
     "electron-titlebar": "0.0.3"
   }
 }
