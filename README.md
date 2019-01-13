@@ -7,7 +7,7 @@ Discord-LiveBot allows you to take control of your Discord bot using a client-li
 
 At the moment, LiveBot is still in alpha stage. To run it, open a terminal window in the main directory, then type `npm test`.
 
-<img src='https://i-banned.dj-electro.me/1032299.png' style='border-radius: 10px;'/>
+<img src='https://succ.world/i/ubhlmykc.png' style='border-radius: 10px;'/>
 
 ## What is this?
 LiveBot is a program built with electron and discord.js, that will allow you to have discord controlling a bot. You are able to view messages in channels, send messages, interact with people, and see what is going on in the servers your bot is in. LiveBot will also work with a user account as well, so you are not just limited to bots.
@@ -15,7 +15,7 @@ LiveBot is a program built with electron and discord.js, that will allow you to 
 LiveBot had been built to copy discord, and while it is not exact, it is pretty close. More additions will come soon, so just be patient, but feel free to recommend any addition, just create an issue!
 
 ## Screenshots
-<img src='https://i-banned.dj-electro.me/482109.png' style='border-radius: 10px;'>
+<img src='https://succ.world/i/hpar21m6.png' style='border-radius: 10px;'>
 
 
 ## How to install
