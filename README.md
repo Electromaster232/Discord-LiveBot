@@ -41,7 +41,7 @@ This box is how you log into a profile. To log into a token by default, put it i
 
 ### Akira!
 Akira is the livebot version of Discord's Clyde. Except Akira works like an actual Bot! Just use the prefix `/`. Only you can see what Akira says, so don't worry about interfering with any conversations. <br>
-<img src='https://i-banned.dj-electro.me/233641.png' style='border-radius: 10px;'>
+<img src='https://succ.world/i/21xpc1n8.png' style='border-radius: 10px;'>
 
 ### Profile card.
 The profile card is able to tell you the username, the avatar image, the discriminator, and something discord does not have. The profile card will tell you if the account you are signed into is a bot or a user. This can be handy if you are not quite sure. <br>

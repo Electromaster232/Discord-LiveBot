@@ -524,7 +524,7 @@ function command(text) {
   let name = document.createElement('p');
   let username;
 
-  username = document.createTextNode('Barry');
+  username = document.createTextNode('Akira');
   name.appendChild(username);
   name.id = 'messageUsername';
   name.style.color = `#999999`;
