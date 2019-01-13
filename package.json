@@ -1,7 +1,7 @@
 {
   "name": "discord-livebot",
   "version": "1.1.2",
-  "description": "Control any token!",
+  "description": "Control any Bot using their Token!",
   "main": "start.js",
   "scripts": {
     "test": "electron ."
@@ -28,7 +28,7 @@
     "livebot",
     "discord-livebot"
   ],
-  "author": "EndlessHosting",
+  "author": "EndlessHosting & Playby",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/EndlessHosting/Discord-LiveBot/issues"
