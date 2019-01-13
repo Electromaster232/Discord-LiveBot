@@ -1,6 +1,6 @@
 **Originally Developed By PlayBy, Modified by Endless Hosting**
 
-# LIVEBOT IS NOW AGAINST TOS, AS IT IS NOT AN OFFICIAL CLIENT. YOU ARE NOT ALLOWED TO RUN USER ACCOUNTS WITH THIS APP, BUT BOTS SHOULD STILL BE OKAY
+# Don't use Livebot with User accounts, as it is bannable. Bots should still be ok!
 
 ### NOTE: Some of the assets in this project belong to Discord Inc, and anyone else it belongs to.
 
