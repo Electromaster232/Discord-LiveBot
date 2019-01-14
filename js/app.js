@@ -683,8 +683,23 @@ function urlify(text) {
 }
 
 function setStatus() {
-  options('status', document.getElementById('statusBox').value)
-}
+	if (document.getElementById('statusBox').value == "streaming") {
+		bot.user.setPresence({
+			game: {
+				name: function() {
+					if (bot.user.presence.game == null) {
+						return "something";
+					} else {
+						return bot.user.presence.game.name;
+					}
+				}(),
+				type: "STREAMING",
+				url: "https://www.twitch.tv/discordapp"
+			}
+		});
+		} else {options('status', document.getElementById('statusBox').value)};
+	}
+
 
 function setGame() {
   options('game', document.getElementById('gameBox').value)
