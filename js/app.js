@@ -697,7 +697,10 @@ function setStatus() {
 				url: "https://www.twitch.tv/discordapp"
 			}
 		});
-		} else {options('status', document.getElementById('statusBox').value)};
+		} else {
+			options('status', document.getElementById('statusBox').value);
+			remote.getGlobal('BWReport')().setOverlayIcon('images/statuses/' + document.getElementById('statusBox').value + '.png', document.getElementById('statusBox').value);
+		};
 	}
 
 
