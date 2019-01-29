@@ -7,11 +7,12 @@ const pack = require('./package.json');
 let win;
 
 function createWindow() {
-  win = new BrowserWindow({width: 1200, height: 650, frame: false, icon: path.join(__dirname, 'images/kiwimascoticnborders.png')});
+  win = new BrowserWindow({width: 1200, height: 650, frame: true, icon: path.join(__dirname, 'images/kiwimascoticnborders.png')});
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
+
   }));
   win.on('closed', () => {
     win = null
