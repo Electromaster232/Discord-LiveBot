@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "discord.js": "^11.4.2",
-    "electron-titlebar": "0.0.3"
+    "electron-titlebar": "0.0.3",
+    "os": "^0.1.1"
   }
 }
